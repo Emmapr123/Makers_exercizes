@@ -1,34 +1,16 @@
-# SecretDiary
-#   - lock
-#   - unlock
-#   - add_entry
-#   - get_entries
-#
-# Initially the `SecretDiary` class is locked, meaning `add_entry` and `get_entries` should throw an error.
-#
-# When the user calls `unlock`, `add_entry` and `get_entries` should work as desired.
-#
-# When the user locks the diary, by calling `lock`, `add_entry` and `get_entries` should, again, throw an error.
+require_relative 'Lock'
 
-class SecretDiary
-  attr_accessor :locked, :entry
+class DiaryEntry
+attr_accessor :entry, :lock
 
   def initialize
-    @locked = true
+    @lock = Lock.new()
     @entry = entry
     @all_entries = []
   end
 
-  def lock
-    @locked = true
-  end
-
-  def unlock
-    @locked = false
-  end
-
   def add_entry(entry)
-    if @locked == true
+    if @lock.locked == true
       'error'
     else
       @all_entries << entry
@@ -36,11 +18,11 @@ class SecretDiary
   end
 
   def get_entries
-    if @locked == true
+    if @lock.locked == true
       'error'
     else
       @all_entries
-  end
+    end
   end
 
 end

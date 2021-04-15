@@ -1,0 +1,100 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.peep-body {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 100vh;
+  padding: 20px 20px 20px 20px;
+}
+
+.new-peep {
+  height: 100px;
+  background-color: teal;
+}
+
+.new-peep-button {
+  border: none;
+  background-color: teal;
+}
+
+.new-peep-button:focus {
+  outline: none;
+}
+
+.new-peep-img {
+  height: 25px;
+}
+
+.peep-box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 60vw;
+  height: 100px;
+  background-color: #FFEA9F;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.peep-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user_handle {
+  font-size: 8px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.created_edited {
+  font-size: 8px;
+}
+
+.peep {
+  height: 100px;
+  background-color: white;
+}
+
+.peep-text {
+  font-family: 'Raleway', sans-serif;
+  padding-left: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 10px;
+  padding: 4px 4px 4px 4px;
+}
+
+.comment {
+  border: none;
+  background-color: #FFEA9F;
+}
+
+.comment:focus {
+  outline: none;
+}
+
+.comment-button {
+  height: 15px;
+}
+
+.like {
+  border: none;
+  background-color: #FFEA9F;
+}
+
+.like:focus {
+  outline: none;
+}
+
+.like-button {
+  height: 15px;
+}
